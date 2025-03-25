@@ -1,4 +1,4 @@
-# StudiKickoff: Bed inversion
+# StudiKickoff: Glacier bed inversion
 
 Each practical session starts with a short presentation by a group of 2 to 3 students, providing a brief introduction to today’s topic (5–10 minutes in total, 2–3 slides per student). At the end of the page, you will find some [useful links and references](#useful-links-and-references) related to today’s topic, but you are not required to cover all of them in your presentation. Additionally, please make use of the lecture notes for this course available on OLAT. After the presentation, we will have a 5 to 10-minute discussion before starting this sessions hands-on exercise.
 

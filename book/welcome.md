@@ -10,8 +10,8 @@ These practicals are written in [Jupyter Notebooks](https://jupyter.org/) (this 
 
 The course grade will be based on three components: the final exam at the end (50%), homework tasks (10%), and the practical sessions (40%). The practicals are graded as follows:
 
-1. StudiKickoff presentation at the start of a session (15%)
-2. Final project at the end of the practical sessions (70%)
+1. StudiKickoff presentation at the start of a session (25%)
+2. Final project at the end of the practical sessions (75%)
 
 A positive evaluation of each of these elements is mandatory to pass the class!
 
