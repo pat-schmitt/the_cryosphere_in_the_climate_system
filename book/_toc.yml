@@ -1,0 +1,38 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: welcome
+parts:
+  - caption: Introduction
+    chapters:
+    - file: getting_started
+    - file: primer
+  #- caption: Session 01
+  #  chapters:
+  #  - file: seesion_01/getting_started
+  #  - file: session_01/practicals
+  - caption: Session 02
+    chapters:
+    - file: session_02/topic
+    #- file: session_02/practicals
+  - caption: Session 03
+    chapters:
+    - file: session_03/topic
+    #- file: session_03/practicals
+  - caption: Session 04
+    chapters:
+    - file: session_04/topic
+    #- file: session_04/practicals
+  - caption: Session 05
+    chapters:
+    - file: session_05/topic
+    #- file: session_05/practicals
+  - caption: Session 06
+    chapters:
+    - file: session_06/topic
+    #- file: session_06/practicals
+  - caption: Session 07
+    chapters:
+    - file: session_07/topic
+    #- file: session_07/practicals
