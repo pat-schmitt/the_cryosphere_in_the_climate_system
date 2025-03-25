@@ -5,8 +5,8 @@ Each practical session starts with a short presentation by a group of 2 to 3 stu
 ## Topic of this session
 
 In this session, the student presentation should cover the following points:
-- The different types of glaciers: mountain glaciers, ice fields, and ice caps
-- Common approaches to representing glaciers in numerical models3(D, 2D, and flowline models) with their respective pros and cons
+- What is the difference between mountain glaciers, ice fields, and ice caps?
+- Common approaches to representing glaciers in numerical models (3D, 2D, and flowline models)
 - What is the default approach in OGGM?
 - What input data is required?
 

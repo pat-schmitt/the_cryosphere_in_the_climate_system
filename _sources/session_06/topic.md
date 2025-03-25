@@ -11,5 +11,7 @@ In this session, the student presentation should cover the following points:
 
 ## Useful links and references
 
+- https://docs.oggm.org/en/stable/mass-balance.html
+- Pirani, A., Fuglestvedt, J. S., Byers, E., O’Neill, B., Riahi, K., Lee, J.-Y., Marotzke, J., Rose, S. K., Schaeffer, R., and Tebaldi, C.: Scenarios in IPCC assessments: lessons from AR6 and opportunities for AR7, npj Clim. Action, 3, https://doi.org/10.1038/s44168-023-00082-1, 2024.
 - van Vuuren, D. P., Edmonds, J., Kainuma, M., Riahi, K., Thomson, A., Hibbard, K., Hurtt, G. C., Kram, T., Krey, V., Lamarque, J.-F., Masui, T., Meinshausen, M., Nakicenovic, N., Smith, S. J., and Rose, S. K.: The representative concentration pathways: an overview, Climatic Change, 109, 5–31, https://doi.org/10.1007/s10584-011-0148-z, 2011.
 - O’Neill, B. C., Tebaldi, C., van Vuuren, D. P., Eyring, V., Friedlingstein, P., Hurtt, G., Knutti, R., Kriegler, E., Lamarque, J.-F., Lowe, J., Meehl, G. A., Moss, R., Riahi, K., and Sanderson, B. M.: The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6, Geosci. Model Dev., 9, 3461–3482, https://doi.org/10.5194/gmd-9-3461-2016, 2016.
