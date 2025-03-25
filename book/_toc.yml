@@ -4,10 +4,10 @@
 format: jb-book
 root: welcome
 parts:
-  - caption: Introduction
-    chapters:
-    - file: getting_started
-    - file: primer
+  #- caption: Introduction
+  #  chapters:
+  #  - file: getting_started
+  #  - file: primer
   #- caption: Session 01
   #  chapters:
   #  - file: seesion_01/getting_started
