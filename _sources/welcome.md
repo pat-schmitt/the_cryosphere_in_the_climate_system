@@ -30,4 +30,4 @@ Each practical session begins with a short presentation by a group of 2 to 3 stu
 ## Authors
 
 - [Patrick Schmitt](https://www.uibk.ac.at/en/acinn/people/patrick-schmitt/) wrote these notes (unless specified otherwise).
-- [Fabien Maussion](http://fabienmaussion.info/): The welcome page, as well as the "Getting started with Jupyter Notebooks" and "Python and Jupyter: a primer" sections, were originally written by Fabien Maussion for a [previous course](https://fabienmaussion.info/climate_system/welcome.html). These materials were later adapted for this website by Patrick Schmitt.
+- [Fabien Maussion](http://fabienmaussion.info/): The welcome page, as well as the "Getting started with Jupyter Notebooks" section, were originally written by Fabien Maussion for a [previous course](https://fabienmaussion.info/climate_system/welcome.html). These materials were later adapted for this website by Patrick Schmitt.

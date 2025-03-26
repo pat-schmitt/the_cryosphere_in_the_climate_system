@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome &#8212; VU The Cryosphere in the Climate System</title>
+    <title>Getting started with Jupyter Notebooks &#8212; VU The Cryosphere in the Climate System</title>
   
   
   
@@ -58,11 +58,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'welcome';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jupyter_notebooks';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installing OGGM" href="install_oggm.html" />
+    <link rel="next" title="Introduction to OGGM" href="session_01/intro_oggm.html" />
+    <link rel="prev" title="Installing OGGM" href="install_oggm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="Mar 26, 2025"/>
@@ -126,8 +127,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -146,7 +145,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="welcome.html">
   
   
   
@@ -177,16 +176,16 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="welcome.html">
                     Welcome
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="install_oggm.html">Installing OGGM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="jupyter_notebooks.html">Getting started with Jupyter Notebooks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started with Jupyter Notebooks</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 01</span></p>
 <ul class="nav bd-sidenav">
@@ -286,7 +285,7 @@
       
       
       
-      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/welcome.md" target="_blank"
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/jupyter_notebooks.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +302,7 @@
       
       
       
-      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fwelcome.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fjupyter_notebooks.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +332,7 @@
       
       
       
-      <li><a href="_sources/welcome.md" target="_blank"
+      <li><a href="_sources/jupyter_notebooks.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -343,7 +342,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -417,7 +416,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome</h1>
+    <h1>Getting started with Jupyter Notebooks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -427,11 +426,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-website">How to use this website</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation-of-the-practicals">Organisation of the practicals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#studikickoff">StudiKickoff</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-notebooks-for-the-practicals">Running Notebooks for the practicals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-on-your-computer">Installing Jupyter on your computer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-b">Plan B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launching-the-jupyterlab-interface">Launching the Jupyterlab interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-run-a-notebook">Download and run a notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-next">What’s next</a></li>
 </ul>
             </nav>
         </div>
@@ -443,55 +445,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome">
-<h1>Welcome<a class="headerlink" href="#welcome" title="Link to this heading">#</a></h1>
-<p>Practicals of the master lecture <a class="reference external" href="https://lfuonline.uibk.ac.at/public/lfuonline_lv.details?sem_id_in=25S&amp;amp;lvnr_id_in=707711&amp;amp;sprache_in=en">707711 VU The Cryosphere in the Climate System</a>, taught to students following a <a class="reference external" href="https://www.uibk.ac.at/en/programmes/ma-atmospheric-sciences/">Master in Atmospheric Sciences</a> curriculum from the Department of Atmospheric and Cryospheric Sciences (<a class="reference external" href="https://www.uibk.ac.at/acinn">ACINN</a>) at the University of Innsbruck.</p>
-<section id="how-to-use-this-website">
-<h2>How to use this website<a class="headerlink" href="#how-to-use-this-website" title="Link to this heading">#</a></h2>
-<p>These practicals are written in <a class="reference external" href="https://jupyter.org/">Jupyter Notebooks</a> (this website is simply an HTML conversion of the original notebooks done with <a class="reference external" href="https://jupyterbook.org/">JupyterBook</a>). This website is therefore only here for convenience: in practice, you will download the notebooks from here and run them on your laptop or online. Each session usually begins with a short student presentation (“StudiKickoff”), followed by a hands-on activity consisting of a Jupyter notebook that is partly guided (“lesson”) and partly composed of questions (“exercise”).</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-jupyter-notebooks">
+<h1>Getting started with Jupyter Notebooks<a class="headerlink" href="#getting-started-with-jupyter-notebooks" title="Link to this heading">#</a></h1>
+<p>Jupyter Notebooks have become a central tool of the scientific python ecosystem. The advantage of jupyter notebooks over traditional code scripts in text files is that they can include text, code, and plots <em>in the same document</em>. Notebooks are a fantastic tool to explore data or models and to communicate about science.</p>
+<p>Notebooks are an ideal playground for learning python and write your homework, without having to jump between several documents! We will use notebooks for the entire class. <strong>In fact, this webpage (and all others in this book) are written in Jupyter Notebooks.</strong></p>
+<section id="running-notebooks-for-the-practicals">
+<h2>Running Notebooks for the practicals<a class="headerlink" href="#running-notebooks-for-the-practicals" title="Link to this heading">#</a></h2>
+<section id="installing-jupyter-on-your-computer">
+<h3>Installing Jupyter on your computer<a class="headerlink" href="#installing-jupyter-on-your-computer" title="Link to this heading">#</a></h3>
+<p>If you did not follow the programming class, <a class="reference external" href="https://fabienmaussion.info/scientific_programming/week_01/01-Installation.html">follow these instructions to install python</a> first. This will provide you with a <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment with nothing but python installed.</p>
+<p>Then, follow the <a class="reference internal" href="install_oggm.html"><span class="std std-doc">instructions for installing OGGM</span></a> to create a new environment called <code class="docutils literal notranslate"><span class="pre">(oggm_env)</span></code>. Activate it with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">activate</span> <span class="n">oggm_env</span>
+</pre></div>
+</div>
+<p>Once in this environment, install the jupyterlab we will need for this class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="n">jupyterlab</span>
+</pre></div>
+</div>
+<p>That’s it!</p>
 </section>
-<section id="grading">
-<h2>Grading<a class="headerlink" href="#grading" title="Link to this heading">#</a></h2>
-<p>The course grade will be based on three components: the final exam at the end (50%), homework tasks (10%), and the practical sessions (40%). The practicals are graded as follows:</p>
-<ol class="arabic simple">
-<li><p>StudiKickoff presentation at the start of a session (25%)</p></li>
-<li><p>Final project at the end of the practical sessions (75%)</p></li>
-</ol>
-<p>A positive evaluation of each of these elements is mandatory to pass the class!</p>
-<p>There will be bonus points for pointing me to typos / mistakes / broken links / incomprehensible or difficult passages in the notebooks.</p>
+<section id="plan-b">
+<h3>Plan B<a class="headerlink" href="#plan-b" title="Link to this heading">#</a></h3>
+<p>If you are not able to run the notebooks on your laptop or on the computer room, we will give you access to an online platform that you can use for the rest of the semester.</p>
 </section>
-<section id="organisation-of-the-practicals">
-<h2>Organisation of the practicals<a class="headerlink" href="#organisation-of-the-practicals" title="Link to this heading">#</a></h2>
-<p>The practicals are organized into seven sessions. Except for the first one, each session will begin with a discussion of any questions from the previous session. This is followed by a short <a class="reference internal" href="#StudiKickoff"><span class="xref myst">StudiKickoff</span></a> presentation to bring everyone up to speed on the current session’s topic. Finally, you’ll work on hands-on exercises provided in the form of Jupyter notebooks.</p>
-<p>In the final session, we will focus on the group project. Each small group will analyze glacier model output for a different catchment area. Our main goal is to combine the work from all groups to collaboratively create a new, unified dataset as a class.</p>
 </section>
-<section id="studikickoff">
-<h2>StudiKickoff<a class="headerlink" href="#studikickoff" title="Link to this heading">#</a></h2>
-<p>Each practical session begins with a short presentation by a group of 2 to 3 students, providing a brief introduction to the day’s topic (5–10 minutes in total, with 2–3 slides per student). The specific topics are listed for each session and are indicated by the “StudiKickoff” label in the heading. There, you will find bullet points outlining the key aspects students should cover in their presentation, as well as a list of useful links and references at the end of each page that can be used. Additionally, please make use of the lecture notes available on OLAT as a supporting resource. After the presentation, we will have a 5 to 10-minute discussion before starting the session’s hands-on exercise.</p>
+<section id="launching-the-jupyterlab-interface">
+<h2>Launching the Jupyterlab interface<a class="headerlink" href="#launching-the-jupyterlab-interface" title="Link to this heading">#</a></h2>
+<p>Jupyterlab is the most recent interface to write and run Jupyter Notebooks.</p>
+<p>To start the <strong>jupyterlab</strong> interface, type the following command in a terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">lab</span>
+</pre></div>
+</div>
+<p>Jupyterlab runs in your browser. You can open a new notebook with the “launcher” button. You can explore files with the file explorer on the left.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not close the terminal from which you started jupyterlab. This is where python is “actually” running: the browser only sends commands to this running instance of python in your terminal.</p>
+</div>
 </section>
-<section id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Link to this heading">#</a></h2>
+<section id="download-and-run-a-notebook">
+<h2>Download and run a notebook<a class="headerlink" href="#download-and-run-a-notebook" title="Link to this heading">#</a></h2>
+<p>To run a notebook, you can:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.uibk.ac.at/en/acinn/people/patrick-schmitt/">Patrick Schmitt</a> wrote these notes (unless specified otherwise).</p></li>
-<li><p><a class="reference external" href="http://fabienmaussion.info/">Fabien Maussion</a>: The welcome page, as well as the “Getting started with Jupyter Notebooks” section, were originally written by Fabien Maussion for a <a class="reference external" href="https://fabienmaussion.info/climate_system/welcome.html">previous course</a>. These materials were later adapted for this website by Patrick Schmitt.</p></li>
+<li><p>click on the “download” button on the top right of each page and copy it in your working directory.</p></li>
+<li><p>visit the book’s <a class="reference external" href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system">repository</a> and download the files from there.</p></li>
 </ul>
+<p>Then open the file either from notebook classic or jupyterlab.</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<section id="what-s-next">
+<h2>What’s next<a class="headerlink" href="#what-s-next" title="Link to this heading">#</a></h2>
+<p>You are now ready for the practicals! Head to the <a class="reference internal" href="session_01/intro_oggm.html"><span class="std std-doc">first notebook (Introduction to OGGM)</span></a> for your first steps.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -524,12 +527,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="install_oggm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installing OGGM</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="session_01/intro_oggm.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installing OGGM</p>
+        <p class="prev-next-title">Introduction to OGGM</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -549,11 +561,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-website">How to use this website</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation-of-the-practicals">Organisation of the practicals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#studikickoff">StudiKickoff</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-notebooks-for-the-practicals">Running Notebooks for the practicals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-on-your-computer">Installing Jupyter on your computer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-b">Plan B</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launching-the-jupyterlab-interface">Launching the Jupyterlab interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-run-a-notebook">Download and run a notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-next">What’s next</a></li>
 </ul>
   </nav></div>
 
