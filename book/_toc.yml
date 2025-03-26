@@ -4,14 +4,13 @@
 format: jb-book
 root: welcome
 parts:
-  #- caption: Introduction
-  #  chapters:
-  #  - file: getting_started
-  #  - file: primer
-  #- caption: Session 01
-  #  chapters:
-  #  - file: seesion_01/getting_started
-  #  - file: session_01/practicals
+  - caption: Setup
+    chapters:
+    - file: install_oggm
+    - file: jupyter_notebooks
+  - caption: Session 01
+    chapters:
+    - file: session_01/intro_oggm
   - caption: Session 02
     chapters:
     - file: session_02/topic
