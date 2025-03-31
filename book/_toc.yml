@@ -14,7 +14,8 @@ parts:
   - caption: Session 02
     chapters:
     - file: session_02/topic
-    #- file: session_02/practicals
+    - file: session_02/numeric_domain_glacier
+    - file: session_02/flowline_creation
   - caption: Session 03
     chapters:
     - file: session_03/topic
