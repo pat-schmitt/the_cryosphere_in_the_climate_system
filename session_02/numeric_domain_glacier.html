@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>StudiKickoff: Geometry evolution models &#8212; VU The Cryosphere in the Climate System</title>
+    <title>Numeric 2D grid of a glacier directory &#8212; VU The Cryosphere in the Climate System</title>
   
   
   
@@ -58,12 +58,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'session_05/topic';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'session_02/numeric_domain_glacier';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="StudiKickoff: Running into the future" href="../session_06/topic.html" />
-    <link rel="prev" title="StudiKickoff: Glacier bed inversion" href="../session_04/topic.html" />
+    <link rel="next" title="Glacier Flowlines" href="flowline_creation.html" />
+    <link rel="prev" title="StudiKickoff: Representing glaciers in models" href="topic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="Mar 31, 2025"/>
@@ -192,11 +192,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../session_01/intro_oggm.html">Introduction to OGGM</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 02</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../session_02/topic.html">StudiKickoff: Representing glaciers in models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../session_02/numeric_domain_glacier.html">Numeric 2D grid of a glacier directory</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic.html">StudiKickoff: Representing glaciers in models</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Numeric 2D grid of a glacier directory</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../session_02/flowline_creation.html">Glacier Flowlines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flowline_creation.html">Glacier Flowlines</a></li>
 
 
 
@@ -211,8 +211,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../session_04/topic.html">StudiKickoff: Glacier bed inversion</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 05</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">StudiKickoff: Geometry evolution models</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_05/topic.html">StudiKickoff: Geometry evolution models</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 06</span></p>
 <ul class="nav bd-sidenav">
@@ -292,7 +292,7 @@
       
       
       
-      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/session_05/topic.md" target="_blank"
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/session_02/numeric_domain_glacier.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +309,7 @@
       
       
       
-      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fsession_05/topic.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fsession_02/numeric_domain_glacier.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -339,7 +339,7 @@
       
       
       
-      <li><a href="../_sources/session_05/topic.md" target="_blank"
+      <li><a href="../_sources/session_02/numeric_domain_glacier.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +349,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -423,7 +423,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>StudiKickoff: Geometry evolution models</h1>
+    <h1>Numeric 2D grid of a glacier directory</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -433,9 +433,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-of-this-session">Topic of this session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links-and-references">Useful links and references</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Numeric 2D grid of a glacier directory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oggm-initzial-set-up">OGGM initzial set up</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#get-a-glacier-directory-with-the-rgi-outline">Get a glacier directory with the RGI outline</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-numeric-2d-grid-and-add-dem">Define a numeric 2D grid and add DEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -446,25 +454,174 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="studikickoff-geometry-evolution-models">
-<h1>StudiKickoff: Geometry evolution models<a class="headerlink" href="#studikickoff-geometry-evolution-models" title="Link to this heading">#</a></h1>
-<p>Each practical session starts with a short presentation by a group of 2 to 3 students, providing a brief introduction to today’s topic (5–10 minutes in total, 2–3 slides per student). At the end of the page, you will find some <a class="reference internal" href="#useful-links-and-references"><span class="xref myst">useful links and references</span></a> related to today’s topic, but you are not required to cover all of them in your presentation. Additionally, please make use of the lecture notes for this course available on OLAT. After the presentation, we will have a 5 to 10-minute discussion before starting this sessions hands-on exercise.</p>
-<section id="topic-of-this-session">
-<h2>Topic of this session<a class="headerlink" href="#topic-of-this-session" title="Link to this heading">#</a></h2>
-<p>In this session, the student presentation should cover the following points:</p>
-<ul class="simple">
-<li><p>What is the purpose of a dynamic geometry evolution model in glacier modeling?</p></li>
-<li><p>What geometry evolution options are available in OGGM? Briefly explain each one.</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="numeric-2d-grid-of-a-glacier-directory">
+<h1>Numeric 2D grid of a glacier directory<a class="headerlink" href="#numeric-2d-grid-of-a-glacier-directory" title="Link to this heading">#</a></h1>
+<p>In this session, we start with an empty glacier directory that only contains the RGI outline (do you remember what the RGI is from last week?). From there, we want to define the numeric grid and download a digital elevation model (DEM). The numeric grid breaks the 2D area around the glacier into a regular grid. This is the grid we will use to project all the data onto later on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first we import the packages we need for this session</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">oggm</span><span class="w"> </span><span class="kn">import</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">utils</span><span class="p">,</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">tasks</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="oggm-initzial-set-up">
+<h2>OGGM initzial set up<a class="headerlink" href="#oggm-initzial-set-up" title="Link to this heading">#</a></h2>
+<p>As we discussed in the last session, OGGM always needs a working directory. This tells it where to work and where to save the results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+
+<span class="c1"># define working directory</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;grid_working_dir&#39;</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># if you set reset=True, everything will be deleted and you can start from a fresh state</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">PATHS</span><span class="p">[</span><span class="s1">&#39;working_dir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.cfg: Multiprocessing: using all available processors (N=8)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="useful-links-and-references">
-<h2>Useful links and references<a class="headerlink" href="#useful-links-and-references" title="Link to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="get-a-glacier-directory-with-the-rgi-outline">
+<h1>Get a glacier directory with the RGI outline<a class="headerlink" href="#get-a-glacier-directory-with-the-rgi-outline" title="Link to this heading">#</a></h1>
+<p>Now we need to get the RGI outline for our selected glacier. To do this, we can use the <a class="reference external" href="https://docs.oggm.org/en/stable/shop.html#pre-processed-directories">preprocessed directories</a>, starting from level 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select the glacier of your choice, you can use the Glims viewer from the first session</span>
+<span class="n">rgi_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RGI60-11.00897&#39;</span><span class="p">]</span>  <span class="c1"># Hintereisferner</span>
+
+<span class="c1"># we load the outline data from the oggm cluster</span>
+<span class="n">prepro_base_url_L0</span> <span class="o">=</span> <span class="s1">&#39;https://cluster.klima.uni-bremen.de/~oggm/gdirs/oggm_v1.6/L1-L2_files/elev_bands/&#39;</span>
+<span class="n">gdirs</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">init_glacier_directories</span><span class="p">(</span><span class="n">rgi_ids</span><span class="p">,</span>
+                                          <span class="n">from_prepro_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                          <span class="n">prepro_base_url</span><span class="o">=</span><span class="n">prepro_base_url_L0</span><span class="p">,</span>
+                                          <span class="n">prepro_border</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>  <span class="c1"># could be 10, 80, 160 or 240</span>
+                                         <span class="p">)</span>
+<span class="n">gdir</span> <span class="o">=</span> <span class="n">gdirs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># for convenience, we define a single variable for our glacier</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.workflow: init_glacier_directories from prepro level 0 on 1 glaciers.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Open the working directory and check which files it contains. Can you explain what each of these files is for?
+</div><p>Your answer here:</p>
+<section id="define-a-numeric-2d-grid-and-add-dem">
+<h2>Define a numeric 2D grid and add DEM<a class="headerlink" href="#define-a-numeric-2d-grid-and-add-dem" title="Link to this heading">#</a></h2>
+<p>Having the glacier outline is a good start, but to define the flowlines later on, we also need elevation information for the area around the glacier. Before we can import any data into our glacier directory (gdir), we first need to decide on the grid we want to use. Each dataset comes with its own map projection, but to combine them properly, we need all of them to use the same map projection. To make this possible, we define a custom map projection for each glacier, along with its associated grid.</p>
+<div class="alert alert-warning">
+    <b>Task</b>: What is a <a href='https://en.wikipedia.org/wiki/Map_projection'>Map Projection</a>?
+</div><p>To define our grid, there are a few parameters you can adjust:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;map_proj&#39;</span><span class="p">],</span> <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;border&#39;</span><span class="p">],</span> <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;grid_dx_method&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;tmerc&#39;, 80, &#39;square&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: What is the meaning of the individual parmeters?  For this have a look at the <a href='https://github.com/OGGM/oggm/blob/stable/oggm/params.cfg'>Parameter file of OGGM</a>, or the <a href='https://docs.oggm.org/en/stable/shop.html#glacier-map-size-the-prepro-border-argument'>documentation</a>.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># you can change those values like this</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;border&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span>  <span class="c1"># the larger the border, the more space on the disc will you need</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we also need to choose a DEM source. You can check out this <a class="reference external" href="https://tutorials.oggm.org/stable/notebooks/tutorials/dem_sources.html">OGGM tutorial</a> to see the available options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;SRTM&#39;</span>  <span class="c1"># this is not the default option, but does not require any registration</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And run the task (if you can not remember what a task is, have a look at the last session):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this task adds the DEM and defines the local grid</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">define_glacier_region</span><span class="p">,</span> 
+                             <span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.workflow: Execute entity tasks [define_glacier_region] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-03-31 10:46:44: oggm.core.gis: (RGI60-11.00897) define_glacier_region
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Open the working directory again and check which files was added. Could you explain the meaning of the different files?
+</div><p>Your answer here:</p>
+<p>We can have a look at our glacier now</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm</span><span class="w"> </span><span class="kn">import</span> <span class="n">graphics</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_domain</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1760e5ee09f06ac7e7b0aaba1c1c6f942ee9a7b5b3f5b54b2956712bbd0b3e63.png" src="../_images/1760e5ee09f06ac7e7b0aaba1c1c6f942ee9a7b5b3f5b54b2956712bbd0b3e63.png" />
+</div>
+</div>
+<p>and also at the grid:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">grid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;salem.Grid&gt;
+  proj: +datum=WGS84 +k=0.9996 +lat_0=0 +lon_0=10.7584 +no_defs+proj=tmerc +units=m +x_0=0 +y_0=0
+  pixel_ref: center
+  origin: upper-left
+  (nx, ny): (279, 234)
+  (dx, dy): (50.0, -50.0)
+  (x0, y0): (-6517.129122277053, 5189040.526772615)
+</pre></div>
+</div>
+</div>
+</div>
+<p>You see that the grid is defined as a <code class="docutils literal notranslate"><span class="pre">salem.Grid</span></code>. You can find more information about it in the <a class="reference external" href="https://salem.readthedocs.io/en/stable/generated/salem.Grid.html">salem Documentation</a>. With this, we are done and are at the stage of level1 of the <a class="reference external" href="https://docs.oggm.org/en/latest/shop.html#pre-processed-directories">preprocessed directories</a>.</p>
+<p>Now we are ready to move on to the next notebook, where we will define the flowlines of our glacier.</p>
+</section>
+<section id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.oggm.org/en/stable/geometry-evolution.html">https://docs.oggm.org/en/stable/geometry-evolution.html</a></p></li>
-<li><p>Maussion, F., Butenko, A., Champollion, N., Dusch, M., Eis, J., Fourteau, K., Gregor, P., Jarosch, A. H., Landmann, J., Oesterle, F., Recinos, B., Rothenpieler, T., Vlug, A., Wild, C. T., and Marzeion, B.: The Open Global Glacier Model (OGGM) v1.1, Geosci. Model Dev., 12, 909–931, <a class="reference external" href="https://doi.org/10.5194/gmd-12-909-2019">https://doi.org/10.5194/gmd-12-909-2019</a>, 2019.</p></li>
-<li><p>Jouvet, G., Cordonnier, G., Kim, B., Lüthi, M., Vieli, A., and Aschwanden, A.: Deep learning speeds up ice flow modelling by several orders of magnitude, J. Glaciol., 68, 651–664, <a class="reference external" href="https://doi.org/10.1017/jog.2021.120">https://doi.org/10.1017/jog.2021.120</a>, 2021.</p></li>
-<li><p>Huss, M. and Hock, R.: A new model for global glacier change and sea-level rise, Front. Earth Sci., 3, <a class="reference external" href="https://doi.org/10.3389/feart.2015.00054">https://doi.org/10.3389/feart.2015.00054</a>, 2015.</p></li>
-<li><p>Marzeion, B., Jarosch, A. H., and Hofer, M.: Past and future sea-level change from the surface mass balance of glaciers, The Cryosphere, 6, 1295–1322, <a class="reference external" href="https://doi.org/10.5194/tc-6-1295-2012">https://doi.org/10.5194/tc-6-1295-2012</a>, 2012.</p></li>
+<li><p>Every workflow starts with a glacier outline.</p></li>
+<li><p>We defined a border around the outline and created a 2D numeric grid.</p></li>
+<li><p>We added a Digital Elevation Model (DEM) to the glacier directory.</p></li>
 </ul>
 </section>
 </section>
@@ -482,7 +639,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./session_05"
+            path: "./session_02"
         },
         predefinedOutput: true
     }
@@ -500,20 +657,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../session_04/topic.html"
+       href="topic.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">StudiKickoff: Glacier bed inversion</p>
+        <p class="prev-next-title">StudiKickoff: Representing glaciers in models</p>
       </div>
     </a>
     <a class="right-next"
-       href="../session_06/topic.html"
+       href="flowline_creation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">StudiKickoff: Running into the future</p>
+        <p class="prev-next-title">Glacier Flowlines</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,9 +690,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-of-this-session">Topic of this session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links-and-references">Useful links and references</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Numeric 2D grid of a glacier directory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oggm-initzial-set-up">OGGM initzial set up</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#get-a-glacier-directory-with-the-rgi-outline">Get a glacier directory with the RGI outline</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-numeric-2d-grid-and-add-dem">Define a numeric 2D grid and add DEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
