@@ -19,7 +19,7 @@ parts:
   - caption: Session 03
     chapters:
     - file: session_03/topic
-    #- file: session_03/practicals
+    - file: session_03/mass_balance_model
   - caption: Session 04
     chapters:
     - file: session_04/topic
