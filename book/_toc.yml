@@ -23,7 +23,7 @@ parts:
   - caption: Session 04
     chapters:
     - file: session_04/topic
-    #- file: session_04/practicals
+    - file: session_04/bed_inversion
   - caption: Session 05
     chapters:
     - file: session_05/topic
