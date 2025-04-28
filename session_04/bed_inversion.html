@@ -1,0 +1,1479 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Glacier bed inversion in OGGM &#8212; VU The Cryosphere in the Climate System</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=2d5429a7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'session_04/bed_inversion';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="StudiKickoff: Geometry evolution models" href="../session_05/topic.html" />
+    <link rel="prev" title="StudiKickoff: Glacier bed inversion" href="topic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Apr 28, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicals_logo.png" class="logo__image only-light" alt="VU The Cryosphere in the Climate System - Home"/>
+    <script>document.write(`<img src="../_static/practicals_logo.png" class="logo__image only-dark" alt="VU The Cryosphere in the Climate System - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../install_oggm.html">Installing OGGM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter_notebooks.html">Getting started with Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 01</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_01/intro_oggm.html">Introduction to OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 02</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_02/topic.html">StudiKickoff: Representing glaciers in models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_02/numeric_domain_glacier.html">Numeric 2D grid of a glacier directory</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../session_02/flowline_creation.html">Glacier Flowlines</a></li>
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 03</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_03/topic.html">StudiKickoff: Mass balance model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_03/mass_balance_model.html">Mass balance model in OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 04</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic.html">StudiKickoff: Glacier bed inversion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Glacier bed inversion in OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 05</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_05/topic.html">StudiKickoff: Geometry evolution models</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 06</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_06/topic.html">StudiKickoff: Running into the future</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 07</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_07/topic.html">StudiKickoff: Hydrological output</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/session_04/bed_inversion.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fsession_04/bed_inversion.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/session_04/bed_inversion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Glacier bed inversion in OGGM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oggm-setup">OGGM setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-actual-inversion">The actual inversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-apparent-mass-balance">Calculation of the apparent mass balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-actual-bed-inversion">The actual bed inversion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bed-inversion-with-calibration-to-estimated-volume">Bed inversion with calibration to estimated volume</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-distributed-thickness">Bonus: Distributed thickness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="glacier-bed-inversion-in-oggm">
+<h1>Glacier bed inversion in OGGM<a class="headerlink" href="#glacier-bed-inversion-in-oggm" title="Link to this heading">#</a></h1>
+<p>So far, we have only looked at the glacier surface: first by defining the surface geometry of our flowline, and then by defining and calibrating the surface mass balance. In this session, we will focus on how to define the glacier bed, which is necessary for running a dynamic simulation in the next session. However, since there are no direct observations available on a global scale, defining the glacier bed is a challenging task that requires some assumptions.</p>
+<p>Let’s dive in!</p>
+<section id="oggm-setup">
+<h2>OGGM setup<a class="headerlink" href="#oggm-setup" title="Link to this heading">#</a></h2>
+<p>First, we set up OGGM as usual. We still need to start from the level 2 preprocessed directories, as we are not yet at level 3. However, I will redo some tasks from previous sessions to bring the glacier directory to the stage we need for today’s work.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first we import the packages we need for this session</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">oggm</span><span class="w"> </span><span class="kn">import</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">utils</span><span class="p">,</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">tasks</span><span class="p">,</span> <span class="n">graphics</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+
+<span class="c1"># define working directory</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;inversion_working_dir&#39;</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># if you set reset=True, everything will be deleted and you can start from a fresh state</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">PATHS</span><span class="p">[</span><span class="s1">&#39;working_dir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:12: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:12: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:12: oggm.cfg: Multiprocessing: using all available processors (N=8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select the glacier of your choice, you can use the Glims viewer from the first session</span>
+<span class="n">rgi_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RGI60-11.00897&#39;</span><span class="p">]</span>  <span class="c1"># Hintereisferner</span>
+
+<span class="c1"># we load the outline data from the oggm cluster</span>
+<span class="n">prepro_base_url_L2</span> <span class="o">=</span> <span class="s1">&#39;https://cluster.klima.uni-bremen.de/~oggm/gdirs/oggm_v1.6/L1-L2_files/elev_bands/&#39;</span>
+<span class="n">gdirs</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">init_glacier_directories</span><span class="p">(</span><span class="n">rgi_ids</span><span class="p">,</span>
+                                          <span class="n">from_prepro_level</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># here we select level 2</span>
+                                          <span class="n">prepro_base_url</span><span class="o">=</span><span class="n">prepro_base_url_L2</span><span class="p">,</span>
+                                          <span class="n">prepro_border</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>  <span class="c1"># could be 10, 80, 160 or 240</span>
+                                         <span class="p">)</span>
+<span class="n">gdir</span> <span class="o">=</span> <span class="n">gdirs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># for convenience, we define a single variable for our glacier</span>
+
+<span class="c1"># redo some tasks of previous sessions to get everything we need for the inversion</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">compute_downstream_bedshape</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">process_climate_data</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">mb_calibration_from_geodetic_mb</span><span class="p">,</span>
+                             <span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">informed_threestep</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                            <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.workflow: init_glacier_directories from prepro level 2 on 1 glaciers.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.workflow: Execute entity tasks [compute_downstream_bedshape] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.core.centerlines: (RGI60-11.00897) compute_downstream_bedshape
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/media/patrick/SD_CARD/mambaforge/envs/cryo_in_climate_25/lib/python3.11/site-packages/oggm/utils/_workflow.py:3185: UserWarning: Unpickling a shapely &lt;2.0 geometry object. Please save the pickle again; shapely 2.1 will not have this compatibility.
+  out = pickle.load(f)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/media/patrick/SD_CARD/mambaforge/envs/cryo_in_climate_25/lib/python3.11/site-packages/oggm/utils/_workflow.py:3185: UserWarning: Unpickling a shapely &lt;2.0 geometry object. Please save the pickle again; shapely 2.1 will not have this compatibility.
+  out = pickle.load(f)
+2025-04-28 09:28:13: oggm.workflow: Execute entity tasks [process_climate_data] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.core.climate: (RGI60-11.00897) process_climate_data
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.shop.w5e5: (RGI60-11.00897) process_gswp3_w5e5_data
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.workflow: Execute entity tasks [mb_calibration_from_geodetic_mb] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:13: oggm.core.massbalance: (RGI60-11.00897) mb_calibration_from_geodetic_mb
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.massbalance: (RGI60-11.00897) mb_calibration_from_scalar_mb
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-actual-inversion">
+<h2>The actual inversion<a class="headerlink" href="#the-actual-inversion" title="Link to this heading">#</a></h2>
+<p>To get started, please read through the description of the <a class="reference external" href="https://docs.oggm.org/en/stable/inversion.html">Bed inversion section in the OGGM documentation</a>, up to the paragraph titled “Calibration”. This information will help you follow along with the tasks discussed below.</p>
+<p>Once you have finished reading, we will begin with the actual inversion.</p>
+</section>
+<section id="calculation-of-the-apparent-mass-balance">
+<h2>Calculation of the apparent mass balance<a class="headerlink" href="#calculation-of-the-apparent-mass-balance" title="Link to this heading">#</a></h2>
+<div class="alert alert-warning">
+    <b>Task</b>:
+    <ul>
+        <li>What is the <b>apparent mass balance</b>?</li>
+        <li>What is the difference between the <b>apparent mass balance</b> and the <b>surface mass balance</b> we studied in the last session?</li>
+    </ul>
+</div><p>Your answer here:</p>
+<p>Calculating the apparent mass balance is simply a matter of running another task:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">apparent_mb_from_any_mb</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [apparent_mb_from_any_mb] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.massbalance: (RGI60-11.00897) apparent_mb_from_any_mb
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can take a look at the diagnostics to see what we have actually calculated:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">get_diagnostics</span><span class="p">()[</span><span class="s1">&#39;apparent_mb_from_any_mb_residual&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1100.3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s also take a look at the mean specific surface mass balance for the period 2000 to 2020:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">massbalance</span>
+
+<span class="c1"># defining the mb model the same way as in the last session</span>
+<span class="n">mb_model</span> <span class="o">=</span> <span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">(</span><span class="n">gdir</span><span class="p">)</span>
+
+<span class="c1"># define the period we want to look at</span>
+<span class="n">mb_years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># get the surface flowline geometery, which we defined two sessions ago</span>
+<span class="n">fls</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;inversion_flowlines&#39;</span><span class="p">)</span>
+
+<span class="c1"># and calculate the mean specific surface mass balance</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mb_model</span><span class="o">.</span><span class="n">get_specific_mb</span><span class="p">(</span><span class="n">fls</span><span class="o">=</span><span class="n">fls</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">mb_years</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1100.3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Why are these two numbers the same (except for their sign)? What are their units? (Hint: Check the definition of the equilibrium assumption in the documentation.)
+</div><p>Your answer here:</p>
+</section>
+<section id="the-actual-bed-inversion">
+<h2>The actual bed inversion<a class="headerlink" href="#the-actual-bed-inversion" title="Link to this heading">#</a></h2>
+<p>After calculating the apparent mass balance, we can use it to perform the actual inversion. Once the inversion is completed, we combine the inverted glacier bed with the downstream line we defined two sessions ago by calling <code class="docutils literal notranslate"><span class="pre">tasks.init_present_time_glacier</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm</span><span class="w"> </span><span class="kn">import</span> <span class="n">global_tasks</span>
+
+<span class="c1"># the inverison can be done at the same time for mutliple glaciers,</span>
+<span class="c1"># why this is different to the other tasks we have seen so far will</span>
+<span class="c1"># get clear in the upcoming sections</span>
+<span class="n">global_tasks</span><span class="o">.</span><span class="n">inversion_tasks</span><span class="p">(</span><span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">filter_inversion_output</span><span class="o">=</span><span class="kc">False</span>  <span class="c1"># for what this filter is used is explained below</span>
+                            <span class="p">)</span>
+
+<span class="c1"># finally we put together our glacier bed with the downstream line we defined two sessions ago</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">init_present_time_glacier</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_no_filter_no_calibration&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_no_filter_no_calibration
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s have a look at it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fls_no_filter_no_calibration</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;model_flowlines&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_no_filter_no_calibration&#39;</span><span class="p">)</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_modeloutput_section</span><span class="p">(</span><span class="n">fls_no_filter_no_calibration</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/81e7f9ef6ccad2055923091c55d9b0ba0e7c5a9e6cef3d3c1db53bbab0c49b8e.png" src="../_images/81e7f9ef6ccad2055923091c55d9b0ba0e7c5a9e6cef3d3c1db53bbab0c49b8e.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Why do we see a large overdeepening at the terminus? (Hint: Review how the inversion is performed in the documentation and think again about the equilibrium assumption.)
+</div><p>Your anwser here:</p>
+<p>Since we are aware of the overdeepening problem, we can fix it by applying a filter at the terminus. Let’s redo the inversion with the filter applied and then check the difference:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s redo the inversion, by using a filter at the terminus</span>
+<span class="n">global_tasks</span><span class="o">.</span><span class="n">inversion_tasks</span><span class="p">(</span><span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">filter_inversion_output</span><span class="o">=</span><span class="kc">True</span>
+                            <span class="p">)</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">init_present_time_glacier</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_no_calibration&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_no_calibration
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fls_no_calibration</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;model_flowlines&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_no_calibration&#39;</span><span class="p">)</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_modeloutput_section</span><span class="p">(</span><span class="n">fls_no_calibration</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f35add38ed56855c39e7a41982cd42a4165a7b7633833cd198e49a719575e311.png" src="../_images/f35add38ed56855c39e7a41982cd42a4165a7b7633833cd198e49a719575e311.png" />
+</div>
+</div>
+<p>After completing the inversion, we can take a look at our calculated volume and compare it to another volume estimate, specifically, the consensus estimate from <a class="reference external" href="https://doi.org/10.1038/s41561-019-0300-3">Farinotti et al. (2019)</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a function to compare the modelled volume with the consensus estimate</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_modelled_and_estimated_volume</span><span class="p">(</span><span class="n">gdir</span><span class="p">):</span>
+    <span class="c1"># Get the modelled volume from the bed inversion (convert from m³ to km³)</span>
+    <span class="n">model_volume</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">get_inversion_volume</span><span class="p">(</span><span class="n">gdir</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e-9</span>  <span class="c1"># km³</span>
+
+    <span class="c1"># Get the consensus estimate volume (convert from m³ to km³)</span>
+    <span class="n">estimated_volume</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">get_demo_file</span><span class="p">(</span><span class="s1">&#39;rgi62_itmix_df.h5&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_id</span><span class="p">][</span><span class="s1">&#39;vol_itmix_m3&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1e-9</span>  <span class="c1"># km³</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Estimated volume: </span><span class="si">{</span><span class="n">estimated_volume</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> km³&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Modelled volume: </span><span class="si">{</span><span class="n">model_volume</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> km³&#39;</span><span class="p">)</span>
+
+<span class="n">print_modelled_and_estimated_volume</span><span class="p">(</span><span class="n">gdir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated volume: 0.578 km³
+Modelled volume: 0.726 km³
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, we are quite far off. The reason for this is that we used the default Glen A parameter during the inversion:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">get_diagnostics</span><span class="p">()[</span><span class="s1">&#39;inversion_glen_a&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.4e-24
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can redo the inversion using your own Glen A parameter by setting the glen_a keyword argument.</p>
+<p>Can you find a better match to the estimated volume?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s redo the inversion, by using a filter at the terminus</span>
+<span class="n">global_tasks</span><span class="o">.</span><span class="n">inversion_tasks</span><span class="p">(</span><span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">filter_inversion_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                             <span class="c1"># here you can play around by providing your own Glen A paramter</span>
+                             <span class="n">glen_a</span><span class="o">=</span><span class="n">gdir</span><span class="o">.</span><span class="n">get_diagnostics</span><span class="p">()[</span><span class="s1">&#39;inversion_glen_a&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="p">)</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">init_present_time_glacier</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_your_glen_a&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_your_glen_a
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: What does the Glen A parameter describe? In which direction do you think we need to change it to bring the modelled volume closer to the estimated one? (Hint: Take a look at the <a href="https://docs.oggm.org/en/stable/ice-dynamics.html#ice-flow">OGGM documentation</a> and the plot in <a href="https://tutorials.oggm.org/stable/notebooks/tutorials/inversion.html#sensitivity-analysis">this section of the OGGM tutorials</a>.)
+</div><p>Your answer here:</p>
+<section id="bed-inversion-with-calibration-to-estimated-volume">
+<h3>Bed inversion with calibration to estimated volume<a class="headerlink" href="#bed-inversion-with-calibration-to-estimated-volume" title="Link to this heading">#</a></h3>
+<p>Fortunately, OGGM has a functionality that allows us to take the estimated volume into account and calibrate the Glen A parameter for better agreement:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># when we use all glaciers, no Glen A could be found within the range [0.1,10] that would match the consensus estimate</span>
+<span class="c1"># usually, this is applied on larger regions where this error should not occur ! </span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">calibrate_inversion_from_consensus</span><span class="p">(</span><span class="n">gdirs</span><span class="p">,</span> <span class="n">filter_inversion_output</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">init_present_time_glacier</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task calibrate_inversion_from_consensus on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 0.1 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 10.0 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 8.36513438288205 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 4.232567191441025 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 3.2958014876543356 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 3.6168558681568994 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 3.588265502025192 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Consensus estimate optimisation with A factor: 3.570324174514066 and fs: 0
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: calibrate_inversion_from_consensus converged after 7 iterations and fs=0. The resulting Glen A factor is 3.588265502025192.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the default OGGM workflow, this calibration is not done for each glacier individually, but rather for an entire region.
+The reason is that the consensus volume estimate is still just an estimate, not a direct observation. We assume larger errors for individual glaciers, but that the estimate becomes more accurate when averaged over large regions.</p>
+<p>Now, let’s check again how well we match the estimated volume:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_modelled_and_estimated_volume</span><span class="p">(</span><span class="n">gdir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:14: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated volume: 0.578 km³
+Modelled volume: 0.578 km³
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great, now we have a perfect match!</p>
+<p>Let’s take a look at the Glen A parameter that was used. Did it change in the direction you expected?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">get_diagnostics</span><span class="p">()[</span><span class="s1">&#39;inversion_glen_a&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.61183720486046e-24
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, let’s plot the three glacier beds we created today side by side (if you want you can also add your own bed inversion here):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;hspace&#39;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">})</span>
+
+<span class="c1"># our intial approach, without a filter at the terminus and no calibration</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_modeloutput_section</span><span class="p">(</span><span class="n">fls_no_filter_no_calibration</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;  _no_filter_no_calibration&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># our secend try, with a filter at the terminus, but no calibration</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_modeloutput_section</span><span class="p">(</span><span class="n">fls_no_calibration</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;  _no_calibration&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># our final bed inversion, with a filter and with a calibration</span>
+<span class="n">fls_oggm</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;model_flowlines&#39;</span><span class="p">)</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_modeloutput_section</span><span class="p">(</span><span class="n">fls_oggm</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;  OGGM default&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.0, 1.0, &#39;  OGGM default&#39;)
+</pre></div>
+</div>
+<img alt="../_images/7cea0508c6690097f38f0f1c8f193633421a589beb0cc69ee0d661ba8a4406d9.png" src="../_images/7cea0508c6690097f38f0f1c8f193633421a589beb0cc69ee0d661ba8a4406d9.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Summarize the differences between the three glacier geometries in your own words.
+</div><p>Your answer here:</p>
+<div class="alert alert-warning">
+    <b>Bonus-task</b>: Calculate the differences between the flowline thicknesses of the different glacier beds and compare them.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hint you can get access to the thickness with the following code</span>
+<span class="n">fls_oggm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">thick</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 29.28945566,  34.62663341,  36.53755592,  40.58641775,
+        41.25818456,  44.49791086,  48.75648043,  48.71668893,
+        47.52216502,  48.87492819,  50.99040376,  55.14222366,
+        59.63352759,  61.57725439,  62.53758894,  61.73621012,
+        64.52398491,  74.97981723,  92.79402728, 106.80211837,
+       119.97007016, 132.65136177, 141.29734588, 151.19945974,
+       155.2196681 , 153.00266311, 144.62906195, 135.67074525,
+       113.29623501, 103.49413621, 116.70473159, 133.09838261,
+       147.65260182, 162.69938521, 164.55436763, 158.23036129,
+       149.7322795 , 145.70758511, 141.22764002, 136.57570437,
+       134.93440589, 126.71821725, 118.39253064, 119.96281391,
+       122.05373962, 119.20176398, 113.86767212, 109.54830123,
+       101.06617402,  90.60813407,  79.64750889,  70.42220597,
+        52.73972897,  39.25530554,  27.88211289,   9.79911962,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ,   0.        ,   0.        ,   0.        ,
+         0.        ])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="bonus-distributed-thickness">
+<h2>Bonus: Distributed thickness<a class="headerlink" href="#bonus-distributed-thickness" title="Link to this heading">#</a></h2>
+<p>There are also some functionalities available to redistribute the flowline thickness back onto the grid:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Distribute flowline thickness to the grid</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">distribute_thickness_per_altitude</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.workflow: Execute entity tasks [distribute_thickness_per_altitude] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.core.inversion: (RGI60-11.00897) distribute_thickness_per_altitude
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.core.gis: (RGI60-11.00897) gridded_attributes
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before we look at the results, let’s also add some observations for comparison, starting with the consensus estimate from <a class="reference external" href="https://doi.org/10.1038/s41561-019-0300-3">Farinotti et al. (2019)</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm.shop</span><span class="w"> </span><span class="kn">import</span> <span class="n">bedtopo</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">bedtopo</span><span class="o">.</span><span class="n">add_consensus_thickness</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.workflow: Execute entity tasks [add_consensus_thickness] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.shop.bedtopo: (RGI60-11.00897) add_consensus_thickness
+</pre></div>
+</div>
+</div>
+</div>
+<p>And now, let’s add a velocity-based estimate from <a class="reference external" href="https://doi.org/10.1038/s41561-021-00885-z">Millan et al. (2022)</a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm.shop</span><span class="w"> </span><span class="kn">import</span> <span class="n">millan22</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">millan22</span><span class="o">.</span><span class="n">thickness_to_gdir</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.workflow: Execute entity tasks [thickness_to_gdir] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 09:28:15: oggm.shop.millan22: (RGI60-11.00897) thickness_to_gdir
+</pre></div>
+</div>
+</div>
+</div>
+<p>Okay, let’s load the data and compare it in a plot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load all gridded data, this is the grid we defined in the second session</span>
+<span class="k">with</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">get_filepath</span><span class="p">(</span><span class="s1">&#39;gridded_data&#39;</span><span class="p">))</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;hspace&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">})</span>
+
+<span class="c1"># the oggm output</span>
+<span class="n">ax_oggm</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">distributed_thickness</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_oggm</span><span class="p">);</span>
+<span class="n">ax_oggm</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;OGGM&#39;</span><span class="p">)</span>
+
+<span class="c1"># the consensus estimate</span>
+<span class="n">ax_consensus</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">consensus_ice_thickness</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_consensus</span><span class="p">)</span>
+<span class="n">ax_consensus</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Farinotti et al. (2019)&#39;</span><span class="p">)</span>
+
+<span class="c1"># the Millan estimate</span>
+<span class="n">ax_millan</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">glacier_mask</span><span class="p">)</span><span class="o">.</span><span class="n">millan_ice_thickness</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_millan</span><span class="p">)</span>
+<span class="n">ax_millan</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Millan et al. (2022)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Millan et al. (2022)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/cb24315b78748fa74b1a486c2a14af766ac34fe3a069965a149049df935c329a.png" src="../_images/cb24315b78748fa74b1a486c2a14af766ac34fe3a069965a149049df935c329a.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: What differences do you notice?
+</div><p>Your answer here:</p>
+</section>
+<section id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We need to assume equilibrium during the inversion process.</p></li>
+<li><p>This assumption can lead to overdeepenings at the terminus for retreating glaciers.</p></li>
+<li><p>We can use a total volume estimate to calibrate the glacier flow parameter Glen A.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./session_04"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">StudiKickoff: Glacier bed inversion</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../session_05/topic.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">StudiKickoff: Geometry evolution models</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oggm-setup">OGGM setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-actual-inversion">The actual inversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-the-apparent-mass-balance">Calculation of the apparent mass balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-actual-bed-inversion">The actual bed inversion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bed-inversion-with-calibration-to-estimated-volume">Bed inversion with calibration to estimated volume</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-distributed-thickness">Bonus: Distributed thickness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Patrick Schmitt
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Apr 28, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2025.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
