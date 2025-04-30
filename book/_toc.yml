@@ -27,7 +27,7 @@ parts:
   - caption: Session 05
     chapters:
     - file: session_05/topic
-    #- file: session_05/practicals
+    - file: session_05/geometry_evolution
   - caption: Session 06
     chapters:
     - file: session_06/topic
