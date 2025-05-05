@@ -1,0 +1,1186 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Geometry evolution models in OGGM &#8212; VU The Cryosphere in the Climate System</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=2d5429a7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'session_05/geometry_evolution';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="StudiKickoff: Running into the future" href="../session_06/topic.html" />
+    <link rel="prev" title="StudiKickoff: Geometry evolution models" href="topic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="May 05, 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicals_logo.png" class="logo__image only-light" alt="VU The Cryosphere in the Climate System - Home"/>
+    <script>document.write(`<img src="../_static/practicals_logo.png" class="logo__image only-dark" alt="VU The Cryosphere in the Climate System - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../install_oggm.html">Installing OGGM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jupyter_notebooks.html">Getting started with Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 01</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_01/intro_oggm.html">Introduction to OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 02</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_02/topic.html">StudiKickoff: Representing glaciers in models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_02/numeric_domain_glacier.html">Numeric 2D grid of a glacier directory</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../session_02/flowline_creation.html">Glacier Flowlines</a></li>
+
+
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 03</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_03/topic.html">StudiKickoff: Mass balance model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_03/mass_balance_model.html">Mass balance model in OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 04</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_04/topic.html">StudiKickoff: Glacier bed inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_04/bed_inversion.html">Glacier bed inversion in OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 05</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic.html">StudiKickoff: Geometry evolution models</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Geometry evolution models in OGGM</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 06</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_06/topic.html">StudiKickoff: Running into the future</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 07</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_07/topic.html">StudiKickoff: Hydrological output</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/session_05/geometry_evolution.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fsession_05/geometry_evolution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/session_05/geometry_evolution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Geometry evolution models in OGGM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oggm-setup">OGGM setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-dynamic-run">A first dynamic run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recalibrate-the-mass-balance-model-including-dynamics">Recalibrate the mass balance model including dynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sandbox">Sandbox</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recape">Recape</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="geometry-evolution-models-in-oggm">
+<h1>Geometry evolution models in OGGM<a class="headerlink" href="#geometry-evolution-models-in-oggm" title="Link to this heading">#</a></h1>
+<p>Until now, we have only looked at the glacier in a static way. In today’s session, we will begin exploring how the glacier geometry dynamically evolves over time. Finally, we will revisit the calibration procedure, this time also considering the effects of a dynamically evolving glacier geometry.</p>
+<section id="oggm-setup">
+<h2>OGGM setup<a class="headerlink" href="#oggm-setup" title="Link to this heading">#</a></h2>
+<p>With the tasks we completed in the last session, we have finished everything needed from the level 2 preprocessed directories, and we can now start this session from level 3.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm</span><span class="w"> </span><span class="kn">import</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">utils</span><span class="p">,</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">tasks</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">patches</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+
+<span class="c1"># define working directory</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;evolution_working_dir&#39;</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># if you set reset=True, everything will be deleted and you can start from a fresh state</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">PATHS</span><span class="p">[</span><span class="s1">&#39;working_dir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:06: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:06: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:06: oggm.cfg: Multiprocessing: using all available processors (N=8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select the glacier of your choice, you can use the Glims viewer from the first session</span>
+<span class="n">rgi_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RGI60-11.01450&#39;</span><span class="p">]</span>  <span class="c1"># Aletsch</span>
+
+<span class="c1"># we load the outline data from the oggm cluster</span>
+<span class="n">prepro_base_url_L3</span> <span class="o">=</span> <span class="s1">&#39;https://cluster.klima.uni-bremen.de/~oggm/gdirs/oggm_v1.6/L3-L5_files/2023.3/elev_bands/W5E5/&#39;</span>
+<span class="n">gdirs</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">init_glacier_directories</span><span class="p">(</span><span class="n">rgi_ids</span><span class="p">,</span>
+                                          <span class="n">from_prepro_level</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="c1"># here we select level 3</span>
+                                          <span class="n">prepro_base_url</span><span class="o">=</span><span class="n">prepro_base_url_L3</span><span class="p">,</span>
+                                          <span class="n">prepro_border</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>  <span class="c1"># could be 10, 80, 160 or 240</span>
+                                         <span class="p">)</span>
+<span class="n">gdir</span> <span class="o">=</span> <span class="n">gdirs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># for convenience, we define a single variable for our glacier</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:06: oggm.workflow: init_glacier_directories from prepro level 3 on 1 glaciers.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:06: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see what the diagnostics tell us:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">get_diagnostics</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;dem_source&#39;: &#39;NASADEM&#39;,
+ &#39;flowline_type&#39;: &#39;elevation_band&#39;,
+ &#39;apparent_mb_from_any_mb_residual&#39;: 1210.6999999999991,
+ &#39;inversion_glen_a&#39;: 6.078248100652642e-24,
+ &#39;inversion_fs&#39;: 0}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Do you remember the meaning of all variables?
+</div><p>Your answer here:</p>
+</section>
+<section id="a-first-dynamic-run">
+<h2>A first dynamic run<a class="headerlink" href="#a-first-dynamic-run" title="Link to this heading">#</a></h2>
+<p>For some theoretical background for this session, please first read the <a class="reference external" href="https://docs.oggm.org/en/stable/ice-dynamics.html">“Ice flow” and “Bed shapes” sections of the OGGM documentation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we want to save the dynamically changing geometry</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;store_model_geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:08: oggm.cfg: PARAMS[&#39;store_model_geometry&#39;] changed from `False` to `True`.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">execute_entity_task</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">run_from_climate_data</span><span class="p">,</span> <span class="n">gdirs</span><span class="p">,</span>
+                             <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_first_run&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:08: oggm.workflow: Execute entity tasks [run_from_climate_data] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:08: oggm.core.flowline: (RGI60-11.01450) run_from_climate_data_first_run
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:08: oggm.core.flowline: (RGI60-11.01450) flowline_model_run_first_run
+</pre></div>
+</div>
+</div>
+</div>
+<p>Okay, that was easy. Now let’s have a look at our run:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the geometry of the glacier after the run</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">oggm.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">flowline</span>
+<span class="n">fmod_first_run</span> <span class="o">=</span> <span class="n">flowline</span><span class="o">.</span><span class="n">FileModel</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">get_filepath</span><span class="p">(</span><span class="s1">&#39;model_geometry&#39;</span><span class="p">,</span>
+                                                      <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_first_run&#39;</span>  <span class="c1"># this is the same as the output_filesuffix defined above</span>
+                                                     <span class="p">))</span>
+
+<span class="c1"># prepare the data for easy plotting</span>
+<span class="n">fl</span> <span class="o">=</span> <span class="n">fmod_first_run</span><span class="o">.</span><span class="n">fls</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Main flowline</span>
+<span class="n">df_coords</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">fl</span><span class="o">.</span><span class="n">dis_on_line</span><span class="o">*</span><span class="n">gdir</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">dx</span><span class="p">)</span>
+<span class="n">df_coords</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Distance along flowline&#39;</span>
+<span class="n">df_coords</span><span class="p">[</span><span class="s1">&#39;bed_elevation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fl</span><span class="o">.</span><span class="n">bed_h</span>
+
+<span class="c1"># read out the surface height for each year</span>
+<span class="n">df_surf_h</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df_coords</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">fmod_first_run</span><span class="o">.</span><span class="n">years</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">fmod_first_run</span><span class="o">.</span><span class="n">years</span><span class="p">:</span>
+    <span class="n">fmod_first_run</span><span class="o">.</span><span class="n">run_until</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+    <span class="n">fl</span> <span class="o">=</span> <span class="n">fmod_first_run</span><span class="o">.</span><span class="n">fls</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">df_surf_h</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="o">=</span> <span class="n">fl</span><span class="o">.</span><span class="n">surface_h</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years_to_plot</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">2020</span><span class="p">]</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">df_surf_h</span><span class="p">[</span><span class="n">years_to_plot</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+<span class="n">df_coords</span><span class="p">[</span><span class="s1">&#39;bed_elevation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Glacier elevation at three points in time&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f9ac9b97b528c33cc9bc0c925c9abc94405755393ef177be5aa727dd745ed1c4.png" src="../_images/f9ac9b97b528c33cc9bc0c925c9abc94405755393ef177be5aa727dd745ed1c4.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: What do you see in this plot? Why is the model run starting from 2004?
+</div><p>Your answer here:</p>
+<p>Now have a look at the total volume and area and compare it to our calibration data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the model run output</span>
+<span class="n">ds_first_run</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">compile_run_output</span><span class="p">(</span><span class="n">gdirs</span><span class="p">,</span> <span class="n">input_filesuffix</span><span class="o">=</span><span class="s1">&#39;_first_run&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:09: oggm.utils: Applying global task compile_run_output on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:09: oggm.utils: Applying compile_run_output on 1 gdirs.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># loading the volume estimate</span>
+<span class="n">estimated_volume</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">get_demo_file</span><span class="p">(</span><span class="s1">&#39;rgi62_itmix_df.h5&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_id</span><span class="p">][</span><span class="s1">&#39;vol_itmix_m3&#39;</span><span class="p">]</span>  <span class="c1"># m³</span>
+
+<span class="c1"># getting the outline area</span>
+<span class="n">observed_area</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">rgi_area_m2</span>  <span class="c1"># m²</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;hspace&#39;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">})</span>
+
+<span class="c1"># plot the volume evolution and the estimated volume</span>
+<span class="n">ax_vol</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ds_first_run</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_vol</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;first model run&#39;</span><span class="p">)</span>
+<span class="n">ax_vol</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_date</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">estimated_volume</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;estimated volume&#39;</span><span class="p">)</span>
+<span class="n">ax_vol</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax_vol</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">);</span>
+
+<span class="c1"># plot the area evolution and the observed outline area</span>
+<span class="n">ax_area</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ds_first_run</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_area</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;first model run&#39;</span><span class="p">)</span>
+<span class="n">ax_area</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_date</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">observed_area</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observed outline area&#39;</span><span class="p">)</span>
+<span class="n">ax_area</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax_area</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c3124e4fb32a4717eab5ba4cc6a1f303fb78481b8dfee1c1f3a24c81633b4e77.png" src="../_images/c3124e4fb32a4717eab5ba4cc6a1f303fb78481b8dfee1c1f3a24c81633b4e77.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: The area is perfectly matched, however the volume not. Why? (Hint: it has to do with the bed inversion workflow.)
+</div><p>Your answer here:</p>
+<p>Finally, during the calibration of the mass balance, we used the geodetic mass balance from <a class="reference external" href="https://www.nature.com/articles/s41586-021-03436-z">Hugonnet et al. (2021)</a>. So let’s also compare our first dynamic run with this dataset.</p>
+<p>One issue we face is that the observation covers the period 2000 to 2020, while our model run only starts in 2004. However, for now, we will ignore this mismatch and calculate the average annual mass change anyway.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the geodetic mb data</span>
+<span class="n">ref_period</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;geodetic_mb_period&#39;</span><span class="p">]</span>
+<span class="n">df_ref_dmdtda</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_geodetic_mb_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_id</span><span class="p">]</span>  <span class="c1"># get the data from Hugonnet et al., 2021</span>
+<span class="n">df_ref_dmdtda</span> <span class="o">=</span> <span class="n">df_ref_dmdtda</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_ref_dmdtda</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ref_period</span><span class="p">]</span>  <span class="c1"># only select the desired period</span>
+<span class="n">dmdtda_reference</span> <span class="o">=</span> <span class="n">df_ref_dmdtda</span><span class="p">[</span><span class="s1">&#39;dmdtda&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>  <span class="c1"># get the reference dmdtda and convert into kg m-2 yr-1</span>
+<span class="n">dmdtda_reference_error</span> <span class="o">=</span> <span class="n">df_ref_dmdtda</span><span class="p">[</span><span class="s1">&#39;err_dmdtda&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>  <span class="c1"># corresponding uncertainty</span>
+
+<span class="c1"># calculate the model counterpart</span>
+<span class="n">first_run_dmdtda</span> <span class="o">=</span> <span class="p">((</span><span class="n">ds_first_run</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2020</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span>
+                     <span class="n">ds_first_run</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2004</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span>
+                    <span class="n">gdir</span><span class="o">.</span><span class="n">rgi_area_m2</span> <span class="o">/</span>
+                    <span class="p">(</span><span class="mi">2020</span> <span class="o">-</span> <span class="mi">2004</span><span class="p">)</span> <span class="o">*</span>
+                    <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;ice_density&#39;</span><span class="p">])</span>
+
+<span class="c1"># and print the two values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Reference dmdtda 2000 to 2020 (Hugonnet 2021): </span><span class="si">{</span><span class="n">dmdtda_reference</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> +/- </span><span class="si">{</span><span class="n">dmdtda_reference_error</span><span class="si">:</span><span class="s1">6.2f</span><span class="si">}</span><span class="s1"> kg m-2 yr-1&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;First run dmdtda 2004 to 2020:                 </span><span class="si">{</span><span class="n">first_run_dmdtda</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">            kg m-2 yr-1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reference dmdtda 2000 to 2020 (Hugonnet 2021): -1210.70 +/- 131.50 kg m-2 yr-1
+First run dmdtda 2004 to 2020:                 -1325.19            kg m-2 yr-1
+</pre></div>
+</div>
+</div>
+</div>
+<p>But wait, during the calibration of the mass balance model, we adjusted it to perfectly match the geodetic observation.
+Let’s double-check that result:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">oggm.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">massbalance</span>
+
+<span class="c1"># we initialize our mass balance model and calculate the mean specific mass balance over the year 2000 and 2020</span>
+<span class="n">mb_mod</span> <span class="o">=</span> <span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">(</span><span class="n">gdir</span><span class="p">)</span>
+<span class="n">fls</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;inversion_flowlines&#39;</span><span class="p">)</span>
+<span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+<span class="n">mb_model_dmdtda</span> <span class="o">=</span> <span class="n">mb_mod</span><span class="o">.</span><span class="n">get_specific_mb</span><span class="p">(</span><span class="n">fls</span><span class="o">=</span><span class="n">fls</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">years</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mass balance dmdtda 2000 to 2020: </span><span class="si">{</span><span class="n">mb_model_dmdtda</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> kg m-2 yr-1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mass balance dmdtda 2000 to 2020: -1210.70 kg m-2 yr-1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: The calibrated mass balance model perfectly matches the geodetic observation, but the dynamic run does not. Why do you think that is?
+</div><p>Your answer here:</p>
+</section>
+<section id="recalibrate-the-mass-balance-model-including-dynamics">
+<h2>Recalibrate the mass balance model including dynamics<a class="headerlink" href="#recalibrate-the-mass-balance-model-including-dynamics" title="Link to this heading">#</a></h2>
+<p>The reason for the mismatch is that the glacier surface geometry changes over time, while we assumed a constant geometry during the initial calibration of the mass balance model.</p>
+<p>To account for this, OGGM includes a <a class="reference external" href="https://docs.oggm.org/en/stable/dynamic-spinup.html">dynamic calibration workflow</a>. This approach starts at an earlier year in the past (by default 1979) and searches for a melt factor that allows the mass balance model to match the observed geodetic mass balance, while also considering the dynamic evolution of the glacier’s surface geometry. Additionally, this workflow also attempts to match the observed glacier area.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># execute the dynamic claibration workflow</span>
+<span class="n">tasks</span><span class="o">.</span><span class="n">run_dynamic_melt_f_calibration</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span>
+                                     <span class="n">ys</span><span class="o">=</span><span class="mi">1979</span><span class="p">,</span>  <span class="c1"># When to start the spinup</span>
+                                     <span class="n">ye</span><span class="o">=</span><span class="mi">2020</span><span class="p">,</span>  <span class="c1"># When the simulation should stop</span>
+                                     <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_dynamic_melt_f&#39;</span><span class="p">,</span>  <span class="c1"># Where to write the output</span>
+                                     <span class="n">err_dmdtda_scaling_factor</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                    <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:10: oggm.core.dynamic_spinup: (RGI60-11.01450) run_dynamic_melt_f_calibration_dynamic_melt_f
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:10: oggm.core.flowline: (RGI60-11.01450) init_present_time_glacier_dyn_melt_f_calib
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:10: oggm.core.dynamic_spinup: (RGI60-11.01450) run_dynamic_spinup_dynamic_melt_f
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:13: oggm.core.flowline: (RGI60-11.01450) init_present_time_glacier_dyn_melt_f_calib
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:13: oggm.core.dynamic_spinup: (RGI60-11.01450) run_dynamic_spinup_dynamic_melt_f
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:13: oggm.core.flowline: (RGI60-11.01450) init_present_time_glacier_dyn_melt_f_calib
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:13: oggm.core.dynamic_spinup: (RGI60-11.01450) run_dynamic_spinup_dynamic_melt_f
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:14: oggm.core.flowline: (RGI60-11.01450) init_present_time_glacier_dyn_melt_f_calib
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:14: oggm.core.dynamic_spinup: (RGI60-11.01450) run_dynamic_spinup_dynamic_melt_f
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.dynamic_spinup: Dynamic melt_f calibration worked for RGI60-11.01450!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open the data of the dynamic calibration run</span>
+<span class="n">ds_spinup</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">compile_run_output</span><span class="p">(</span><span class="n">gdirs</span><span class="p">,</span> <span class="n">input_filesuffix</span><span class="o">=</span><span class="s1">&#39;_dynamic_melt_f&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.utils: Applying global task compile_run_output on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.utils: Applying compile_run_output on 1 gdirs.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the model counterpart</span>
+<span class="n">spinup_dmdtda</span> <span class="o">=</span> <span class="p">((</span><span class="n">ds_spinup</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2020</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span>
+                  <span class="n">ds_spinup</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2000</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span>
+                 <span class="n">gdir</span><span class="o">.</span><span class="n">rgi_area_m2</span> <span class="o">/</span>
+                 <span class="p">(</span><span class="mi">2020</span> <span class="o">-</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">*</span>
+                 <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;ice_density&#39;</span><span class="p">])</span>
+
+<span class="c1"># and print the two values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Reference dmdtda 2000 to 2020 (Hugonnet 2021): </span><span class="si">{</span><span class="n">dmdtda_reference</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> +/- </span><span class="si">{</span><span class="n">dmdtda_reference_error</span><span class="si">:</span><span class="s1">6.2f</span><span class="si">}</span><span class="s1"> kg m-2 yr-1&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;First run dmdtda 2004 to 2020:                 </span><span class="si">{</span><span class="n">first_run_dmdtda</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">            kg m-2 yr-1&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Spinup run dmdtda 2000 to 2020:                </span><span class="si">{</span><span class="n">spinup_dmdtda</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">            kg m-2 yr-1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reference dmdtda 2000 to 2020 (Hugonnet 2021): -1210.70 +/- 131.50 kg m-2 yr-1
+First run dmdtda 2004 to 2020:                 -1325.19            kg m-2 yr-1
+Spinup run dmdtda 2000 to 2020:                -1189.21            kg m-2 yr-1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Much better! Now, let’s also compare the volume and area evolution of the two runs to see how the glacier behaves under static vs. dynamic calibration:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;hspace&#39;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">})</span>
+
+<span class="c1"># plot the volume evolution and the estimated volume</span>
+<span class="n">ax_vol</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ds_first_run</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_vol</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;first model run&#39;</span><span class="p">)</span>
+<span class="n">ds_spinup</span><span class="o">.</span><span class="n">volume</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_vol</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;spinup run&#39;</span><span class="p">)</span>
+<span class="n">ax_vol</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_date</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">estimated_volume</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;estimated volume&#39;</span><span class="p">)</span>
+<span class="n">ax_vol</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax_vol</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">);</span>
+
+<span class="c1"># plot the area evolution and the observed outline area</span>
+<span class="n">ax_area</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ds_first_run</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_area</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;first model run&#39;</span><span class="p">)</span>
+<span class="n">ds_spinup</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_area</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;spinup run&#39;</span><span class="p">)</span>
+<span class="n">ax_area</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_date</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">observed_area</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observed outline area&#39;</span><span class="p">)</span>
+<span class="n">ax_area</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax_area</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/baed5312917bf1feb52a36722e1db0f17afd53cbc15affef9719c68fcca390fa.png" src="../_images/baed5312917bf1feb52a36722e1db0f17afd53cbc15affef9719c68fcca390fa.png" />
+</div>
+</div>
+<p>As you can see, the area is not matched as precisely as before, and the volume is also slightly less accurate.
+However, the geodetic mass balance is now matched much more closely, which was the main goal of the dynamic calibration.</p>
+<p>With this, we haveve reached the final level 4 of the preprocessed directories. The dynamic spinup runs we just performed are used by OGGM by default to initialize projections into the future, something we will explore in the next session.</p>
+<p>In the <a class="reference external" href="https://docs.oggm.org/en/stable/shop.html#pre-processed-directories">preprocessed directories</a>, you will also find a level 5. This level is identical to level 4, but to save disk space, some intermediate files created during the setup are deleted. Only the files needed for computing future projections are retained. Future projections will be the topic of the next session.</p>
+<p>But now that we have a dynamic glacier model, let’s take some time to explore how changing certain parameters affects the glacier’s dynamic evolution.</p>
+</section>
+<section id="sandbox">
+<h2>Sandbox<a class="headerlink" href="#sandbox" title="Link to this heading">#</a></h2>
+<p>Let’s have some fun and explore how changing the individual parameters we previously calibrated affects the glacier’s evolution.</p>
+<p>To do this, we will run the model with different parameter settings and compare the results:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First we make a run with the default settings and define this as our default</span>
+<span class="n">tasks</span><span class="o">.</span><span class="n">run_from_climate_data</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span>
+                            <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_default&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.flowline: (RGI60-11.01450) run_from_climate_data_default
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.flowline: (RGI60-11.01450) flowline_model_run_default
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># next conduct a run with doubled Glen A parameter</span>
+<span class="n">tasks</span><span class="o">.</span><span class="n">run_from_climate_data</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span>
+                            <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_glen_a_doubled&#39;</span><span class="p">,</span>
+                            <span class="n">glen_a_fac</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># this factor is multiplied to the calibrated glen a parameter</span>
+                           <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.flowline: (RGI60-11.01450) run_from_climate_data_glen_a_doubled
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.flowline: (RGI60-11.01450) flowline_model_run_glen_a_doubled
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># and finally we decrease the melt factor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;mb_calib&#39;</span><span class="p">)</span>
+
+<span class="c1"># here we adapt the melt factor</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;melt_f&#39;</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">0.95</span> 
+
+<span class="c1"># you can also perturbe the prcp_fac or temp_bias the same way as the melt_f</span>
+<span class="n">gdir</span><span class="o">.</span><span class="n">write_json</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="s1">&#39;mb_calib&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f&#39;</span><span class="p">)</span>  <span class="c1"># write a new file, with perturbed parameters</span>
+
+<span class="c1"># and run the model with the smaller melt factor</span>
+<span class="n">tasks</span><span class="o">.</span><span class="n">run_from_climate_data</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span>
+                            <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f&#39;</span><span class="p">,</span>
+                            <span class="n">mb_model_class</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">,</span>
+                                                     <span class="n">mb_params_filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f&#39;</span><span class="p">)</span>
+                           <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.flowline: (RGI60-11.01450) run_from_climate_data_smaller_melt_f
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:15: oggm.core.flowline: (RGI60-11.01450) flowline_model_run_smaller_melt_f
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Copy the code above and create a model run with a perturbed precipitation factor or temperature bias!
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After creating our sensitivity experiments, let’s take a look at how these changes influence the glacier’s dynamic volume evolution:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a function for easy opening of the data</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_model_diagnostics</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">filesuffix</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">get_filepath</span><span class="p">(</span><span class="s1">&#39;model_diagnostics&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="n">filesuffix</span><span class="p">))</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ds</span>
+
+<span class="c1"># open the data for our different runs</span>
+<span class="n">ds_default</span> <span class="o">=</span> <span class="n">get_model_diagnostics</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_default&#39;</span><span class="p">)</span>
+<span class="n">ds_glen_a_doubled</span> <span class="o">=</span> <span class="n">get_model_diagnostics</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_glen_a_doubled&#39;</span><span class="p">)</span>
+<span class="n">ds_smaller_melt_f</span> <span class="o">=</span> <span class="n">get_model_diagnostics</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot the results</span>
+<span class="n">ds_default</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Default&#39;</span><span class="p">);</span>
+<span class="n">ds_glen_a_doubled</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Glen A doubled&#39;</span><span class="p">);</span>
+<span class="n">ds_smaller_melt_f</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Smaller melt factor&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7059d7328e90&gt;
+</pre></div>
+</div>
+<img alt="../_images/84258347284a72f938d2eb80d3ca0c758044af888743a7add21cac5e26680ad2.png" src="../_images/84258347284a72f938d2eb80d3ca0c758044af888743a7add21cac5e26680ad2.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Can you explain why the volume evolution changed the way it did? (Think about how each parameter influences melt, accumulation, and glacier dynamics.)
+</div><p>Your answer here:</p>
+<div class="alert alert-warning">
+    <b>Task</b>: Can you find a precipitation factor that brings the volume evolution back in line with the default run, but using a smaller melt factor?
+<p>Before you start, try to guess: in which direction does the precipitation factor need to change?</p>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;mb_calib&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f&#39;</span><span class="p">)</span>
+
+<span class="c1"># search here for a factor to compensate for the smaller melt factor</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;prcp_fac&#39;</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">1</span>  
+
+<span class="n">gdir</span><span class="o">.</span><span class="n">write_json</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="s1">&#39;mb_calib&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f_and_adapted_prcp_fac&#39;</span><span class="p">)</span>  <span class="c1"># write a new file, with perturbed parameters</span>
+<span class="n">tasks</span><span class="o">.</span><span class="n">run_from_climate_data</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span>
+                            <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f_and_adapted_prcp_fac&#39;</span><span class="p">,</span>
+                            <span class="n">mb_model_class</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">,</span>
+                                                     <span class="n">mb_params_filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f_and_adapted_prcp_fac&#39;</span><span class="p">)</span>
+                           <span class="p">)</span>
+
+<span class="n">ds_smaller_melt_f_and_adapted_prcp_fac</span> <span class="o">=</span> <span class="n">get_model_diagnostics</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_smaller_melt_f_and_adapted_prcp_fac&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot the results</span>
+<span class="n">ds_default</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Default&#39;</span><span class="p">);</span>
+<span class="n">ds_smaller_melt_f</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Smaller melt factor&#39;</span><span class="p">);</span>
+<span class="n">ds_smaller_melt_f_and_adapted_prcp_fac</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Smaller melt factor and adapted prcipitation factor&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:16: oggm.core.flowline: (RGI60-11.01450) run_from_climate_data_smaller_melt_f_and_adapted_prcp_fac
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:16: oggm.core.flowline: (RGI60-11.01450) flowline_model_run_smaller_melt_f_and_adapted_prcp_fac
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7059de008d10&gt;
+</pre></div>
+</div>
+<img alt="../_images/167a353ad9ed35dd627ab8fe8af0bf11f69990ac24c927d3f6559b82cd65b895.png" src="../_images/167a353ad9ed35dd627ab8fe8af0bf11f69990ac24c927d3f6559b82cd65b895.png" />
+</div>
+</div>
+<div class="alert alert-warning">
+    <b>Task</b>: Why is it possible to find a precipitation factor that compensates for a smaller melt factor, resulting in almost the same volume evolution? (Hint: Think back to the session on mass balance model calibration.)
+</div><p>Your answer here:</p>
+ <div class="alert alert-warning">
+    <b>Bonus Task</b>: Can you also compensate for doubling the Glen A parameter by adjusting some of the mass balance parameters?
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;mb_calib&#39;</span><span class="p">)</span>
+
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;prcp_fac&#39;</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">1.2</span>  <span class="c1"># here you can play with the precipitation factor</span>
+<span class="n">params</span><span class="p">[</span><span class="s1">&#39;melt_f&#39;</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">1.1</span>  <span class="c1"># here you can play with the melt factor</span>
+
+<span class="n">gdir</span><span class="o">.</span><span class="n">write_json</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="s1">&#39;mb_calib&#39;</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_compensate_larger_glen_a&#39;</span><span class="p">)</span>  <span class="c1"># write a new file, with perturbed parameters</span>
+<span class="n">tasks</span><span class="o">.</span><span class="n">run_from_climate_data</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span>
+                            <span class="n">output_filesuffix</span><span class="o">=</span><span class="s1">&#39;_compensate_larger_glen_a&#39;</span><span class="p">,</span>
+                            <span class="n">mb_model_class</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">,</span>
+                                                     <span class="n">mb_params_filesuffix</span><span class="o">=</span><span class="s1">&#39;_compensate_larger_glen_a&#39;</span><span class="p">),</span>
+                            <span class="n">glen_a_fac</span><span class="o">=</span><span class="mi">2</span>
+                           <span class="p">)</span>
+
+<span class="n">ds_compensate_larger_glen_a</span> <span class="o">=</span> <span class="n">get_model_diagnostics</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">filesuffix</span><span class="o">=</span><span class="s1">&#39;_compensate_larger_glen_a&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot the results</span>
+<span class="n">ds_default</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Default&#39;</span><span class="p">);</span>
+<span class="n">ds_glen_a_doubled</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Glen A doubled&#39;</span><span class="p">);</span>
+<span class="n">ds_compensate_larger_glen_a</span><span class="o">.</span><span class="n">volume_m3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Compansate change of glen a&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:16: oggm.core.flowline: (RGI60-11.01450) run_from_climate_data_compensate_larger_glen_a
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:16: oggm.core.flowline: (RGI60-11.01450) flowline_model_run_compensate_larger_glen_a
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7059de0f1950&gt;
+</pre></div>
+</div>
+<img alt="../_images/d19494fca778fb65dab60d2412894e67afdd4e9cd6a089edfb991c94654946d4.png" src="../_images/d19494fca778fb65dab60d2412894e67afdd4e9cd6a089edfb991c94654946d4.png" />
+</div>
+</div>
+</section>
+<section id="recape">
+<h2>Recape<a class="headerlink" href="#recape" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We have now recreated all steps of the OGGM default preprocessed directories.</p></li>
+<li><p>When accounting for changing glacier geometry, we need to recalibrate the mass balance model accordingly.</p></li>
+<li><p>There is an equifinality problem in the mass balance parameters: with only one observation available, multiple parameter combinations can produce similar results.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./session_05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">StudiKickoff: Geometry evolution models</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../session_06/topic.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">StudiKickoff: Running into the future</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oggm-setup">OGGM setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-dynamic-run">A first dynamic run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recalibrate-the-mass-balance-model-including-dynamics">Recalibrate the mass balance model including dynamics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sandbox">Sandbox</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recape">Recape</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Patrick Schmitt
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on May 05, 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2025.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

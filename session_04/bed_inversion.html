@@ -66,7 +66,7 @@
     <link rel="prev" title="StudiKickoff: Glacier bed inversion" href="topic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Apr 28, 2025"/>
+    <meta name="docbuild:last-update" content="May 05, 2025"/>
   </head>
   
   
@@ -215,6 +215,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 05</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../session_05/topic.html">StudiKickoff: Geometry evolution models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_05/geometry_evolution.html">Geometry evolution models in OGGM</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 06</span></p>
 <ul class="nav bd-sidenav">
@@ -486,13 +487,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:38: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:57: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:38: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:57: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:38: oggm.cfg: Multiprocessing: using all available processors (N=8)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:57: oggm.cfg: Multiprocessing: using all available processors (N=8)
 </pre></div>
 </div>
 </div>
@@ -522,40 +523,40 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:39: oggm.workflow: init_glacier_directories from prepro level 2 on 1 glaciers.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:57: oggm.workflow: init_glacier_directories from prepro level 2 on 1 glaciers.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:39: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:57: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:41: oggm.workflow: Execute entity tasks [compute_downstream_bedshape] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:58: oggm.workflow: Execute entity tasks [compute_downstream_bedshape] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:41: oggm.core.centerlines: (RGI60-11.00897) compute_downstream_bedshape
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/media/patrick/SD_CARD/mambaforge/envs/cryo_in_climate_25/lib/python3.11/site-packages/oggm/utils/_workflow.py:3185: UserWarning: Unpickling a shapely &lt;2.0 geometry object. Please save the pickle again; shapely 2.1 will not have this compatibility.
-  out = pickle.load(f)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:58: oggm.core.centerlines: (RGI60-11.00897) compute_downstream_bedshape
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/media/patrick/SD_CARD/mambaforge/envs/cryo_in_climate_25/lib/python3.11/site-packages/oggm/utils/_workflow.py:3185: UserWarning: Unpickling a shapely &lt;2.0 geometry object. Please save the pickle again; shapely 2.1 will not have this compatibility.
   out = pickle.load(f)
-2025-04-28 13:24:41: oggm.workflow: Execute entity tasks [process_climate_data] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:41: oggm.core.climate: (RGI60-11.00897) process_climate_data
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/media/patrick/SD_CARD/mambaforge/envs/cryo_in_climate_25/lib/python3.11/site-packages/oggm/utils/_workflow.py:3185: UserWarning: Unpickling a shapely &lt;2.0 geometry object. Please save the pickle again; shapely 2.1 will not have this compatibility.
+  out = pickle.load(f)
+2025-05-05 09:28:58: oggm.workflow: Execute entity tasks [process_climate_data] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:41: oggm.shop.w5e5: (RGI60-11.00897) process_gswp3_w5e5_data
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:58: oggm.core.climate: (RGI60-11.00897) process_climate_data
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:43: oggm.workflow: Execute entity tasks [mb_calibration_from_geodetic_mb] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:58: oggm.shop.w5e5: (RGI60-11.00897) process_gswp3_w5e5_data
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:43: oggm.core.massbalance: (RGI60-11.00897) mb_calibration_from_geodetic_mb
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:58: oggm.workflow: Execute entity tasks [mb_calibration_from_geodetic_mb] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.massbalance: (RGI60-11.00897) mb_calibration_from_scalar_mb
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:58: oggm.core.massbalance: (RGI60-11.00897) mb_calibration_from_geodetic_mb
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.massbalance: (RGI60-11.00897) mb_calibration_from_scalar_mb
 </pre></div>
 </div>
 </div>
@@ -583,10 +584,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [apparent_mb_from_any_mb] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [apparent_mb_from_any_mb] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.massbalance: (RGI60-11.00897) apparent_mb_from_any_mb
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.massbalance: (RGI60-11.00897) apparent_mb_from_any_mb
 </pre></div>
 </div>
 </div>
@@ -654,25 +655,25 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_no_filter_no_calibration
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_no_filter_no_calibration
 </pre></div>
 </div>
 </div>
@@ -705,31 +706,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:44: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_no_calibration
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:28:59: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_no_calibration
 </pre></div>
 </div>
 </div>
@@ -764,7 +765,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated volume: 0.578 km³
@@ -802,31 +803,31 @@ Modelled volume: 0.726 km³
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_your_glen_a
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier_your_glen_a
 </pre></div>
 </div>
 </div>
@@ -847,283 +848,283 @@ Modelled volume: 0.726 km³
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task calibrate_inversion_from_consensus on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task calibrate_inversion_from_consensus on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 0.1 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 0.1 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 10.0 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 10.0 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 8.36513438288205 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 8.36513438288205 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 4.232567191441025 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 4.232567191441025 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 3.2958014876543356 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 3.2958014876543356 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 3.6168558681568994 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 3.6168558681568994 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 3.588265502025192 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 3.588265502025192 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Consensus estimate optimisation with A factor: 3.570324174514066 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Consensus estimate optimisation with A factor: 3.570324174514066 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: calibrate_inversion_from_consensus converged after 7 iterations and fs=0. The resulting Glen A factor is 3.588265502025192.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: calibrate_inversion_from_consensus converged after 7 iterations and fs=0. The resulting Glen A factor is 3.588265502025192.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Applying global task inversion_tasks on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) prepare_for_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) mass_conservation_inversion
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [filter_inversion_output] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) filter_inversion_output
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [get_inversion_volume] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.workflow: Execute entity tasks [init_present_time_glacier] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.flowline: (RGI60-11.00897) init_present_time_glacier
 </pre></div>
 </div>
 </div>
@@ -1138,7 +1139,7 @@ The reason is that the consensus volume estimate is still just an estimate, not 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:00: oggm.core.inversion: (RGI60-11.00897) get_inversion_volume
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated volume: 0.578 km³
@@ -1245,13 +1246,13 @@ Modelled volume: 0.578 km³
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [distribute_thickness_per_altitude] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.workflow: Execute entity tasks [distribute_thickness_per_altitude] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.inversion: (RGI60-11.00897) distribute_thickness_per_altitude
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.core.inversion: (RGI60-11.00897) distribute_thickness_per_altitude
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.core.gis: (RGI60-11.00897) gridded_attributes
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.core.gis: (RGI60-11.00897) gridded_attributes
 </pre></div>
 </div>
 </div>
@@ -1265,10 +1266,10 @@ Modelled volume: 0.578 km³
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:45: oggm.workflow: Execute entity tasks [add_consensus_thickness] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.workflow: Execute entity tasks [add_consensus_thickness] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:46: oggm.shop.bedtopo: (RGI60-11.00897) add_consensus_thickness
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.shop.bedtopo: (RGI60-11.00897) add_consensus_thickness
 </pre></div>
 </div>
 </div>
@@ -1282,10 +1283,10 @@ Modelled volume: 0.578 km³
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:46: oggm.workflow: Execute entity tasks [thickness_to_gdir] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.workflow: Execute entity tasks [thickness_to_gdir] on 1 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-04-28 13:24:46: oggm.shop.millan22: (RGI60-11.00897) thickness_to_gdir
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-05-05 09:29:01: oggm.shop.millan22: (RGI60-11.00897) thickness_to_gdir
 </pre></div>
 </div>
 </div>
@@ -1441,7 +1442,7 @@ By Patrick Schmitt
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Apr 28, 2025.
+  Last updated on May 05, 2025.
   <br/>
 </p>
   </div>
