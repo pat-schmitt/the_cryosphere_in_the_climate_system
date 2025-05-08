@@ -31,7 +31,7 @@ parts:
   - caption: Session 06
     chapters:
     - file: session_06/topic
-    #- file: session_06/practicals
+    - file: session_06/future_evolution
   - caption: Session 07
     chapters:
     - file: session_07/topic
