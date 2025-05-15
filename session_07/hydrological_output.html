@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>StudiKickoff: Mass balance model &#8212; VU The Cryosphere in the Climate System</title>
+    <title>Hydrological mass-balance output &#8212; VU The Cryosphere in the Climate System</title>
   
   
   
@@ -58,12 +58,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'session_03/topic';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'session_07/hydrological_output';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mass balance model in OGGM" href="mass_balance_model.html" />
-    <link rel="prev" title="Glacier Flowlines" href="../session_02/flowline_creation.html" />
+    <link rel="next" title="Group project" href="project.html" />
+    <link rel="prev" title="StudiKickoff: Hydrological output" href="topic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="May 15, 2025"/>
@@ -203,9 +203,9 @@
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 03</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">StudiKickoff: Mass balance model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mass_balance_model.html">Mass balance model in OGGM</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session_03/topic.html">StudiKickoff: Mass balance model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../session_03/mass_balance_model.html">Mass balance model in OGGM</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 04</span></p>
 <ul class="nav bd-sidenav">
@@ -223,10 +223,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../session_06/future_evolution.html">Running into the future with GCM data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Session 07</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../session_07/topic.html">StudiKickoff: Hydrological output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../session_07/hydrological_output.html">Hydrological mass-balance output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../session_07/project.html">Group project</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic.html">StudiKickoff: Hydrological output</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hydrological mass-balance output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Group project</a></li>
 </ul>
 
     </div>
@@ -298,7 +298,7 @@
       
       
       
-      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/session_03/topic.md" target="_blank"
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/edit/main/book/session_07/hydrological_output.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +315,7 @@
       
       
       
-      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fsession_03/topic.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/pat-schmitt/the_cryosphere_in_the_climate_system/issues/new?title=Issue%20on%20page%20%2Fsession_07/hydrological_output.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,7 +345,7 @@
       
       
       
-      <li><a href="../_sources/session_03/topic.md" target="_blank"
+      <li><a href="../_sources/session_07/hydrological_output.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +355,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -416,9 +416,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -429,20 +427,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>StudiKickoff: Mass balance model</h1>
+    <h1>Hydrological mass-balance output</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-of-this-session">Topic of this session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links-and-references">Useful links and references</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -452,31 +441,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="studikickoff-mass-balance-model">
-<h1>StudiKickoff: Mass balance model<a class="headerlink" href="#studikickoff-mass-balance-model" title="Link to this heading">#</a></h1>
-<p>Each practical session starts with a short presentation by a group of 2 to 3 students, providing a brief introduction to today’s topic (5–10 minutes in total, 2–3 slides per student). At the end of the page, you will find some <a class="reference internal" href="#useful-links-and-references"><span class="xref myst">useful links and references</span></a> related to today’s topic, but you are not required to cover all of them in your presentation. Additionally, please make use of the lecture notes for this course available on OLAT. After the presentation, we will have a 5 to 10-minute discussion before starting this sessions hands-on exercise.</p>
-<section id="topic-of-this-session">
-<h2>Topic of this session<a class="headerlink" href="#topic-of-this-session" title="Link to this heading">#</a></h2>
-<p>In this session, the student presentation should cover the following points:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="hydrological-mass-balance-output">
+<h1>Hydrological mass-balance output<a class="headerlink" href="#hydrological-mass-balance-output" title="Link to this heading">#</a></h1>
+<p>With the OGGM task <code class="docutils literal notranslate"><span class="pre">run_with_hydro</span></code>, you can add mass-balance and runoff diagnostics to the OGGM output files. To explore how this method works, we will use the following two OGGM-Edu notebooks:</p>
 <ul class="simple">
-<li><p>Recap: What is the mass balance of a glacier?</p></li>
-<li><p>What are the different options for modeling mass balance?</p></li>
-<li><p>Which mass balance models are available in OGGM?</p></li>
-<li><p>What input and observation data is available at a global scale for mass balance modeling?</p></li>
+<li><p><a class="reference external" href="https://oggm.org/oggm-edu-notebooks/oggm-edu/glacier_water_resources.html">Glaciers as water resources: part 1 (idealized climate)</a></p></li>
+<li><p><a class="reference external" href="https://oggm.org/oggm-edu-notebooks/oggm-edu/glacier_water_resources_projections.html">Glaciers as water resources: part 2 (projections)</a></p></li>
 </ul>
-</section>
-<section id="useful-links-and-references">
-<h2>Useful links and references<a class="headerlink" href="#useful-links-and-references" title="Link to this heading">#</a></h2>
+<p>You can download these notebooks the same way you are used to from the practical course website. The notebooks contain both familiar content and some new concepts. Please work through them, and feel free to reach out if you have any questions.</p>
+<p>Key topics you should learn from the notebooks:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.oggm.org/en/stable/mass-balance.html">https://docs.oggm.org/en/stable/mass-balance.html</a></p></li>
-<li><p><a class="reference external" href="https://www.antarcticglaciers.org/glacier-processes/mass-balance/introduction-glacier-mass-balance/">https://www.antarcticglaciers.org/glacier-processes/mass-balance/introduction-glacier-mass-balance/</a></p></li>
-<li><p><a class="reference external" href="https://www.antarcticglaciers.org/glaciers-and-climate/numerical-ice-sheet-models/modelling-glacier-melt/">https://www.antarcticglaciers.org/glaciers-and-climate/numerical-ice-sheet-models/modelling-glacier-melt/</a></p></li>
-<li><p>Maussion, F., Butenko, A., Champollion, N., Dusch, M., Eis, J., Fourteau, K., Gregor, P., Jarosch, A. H., Landmann, J., Oesterle, F., Recinos, B., Rothenpieler, T., Vlug, A., Wild, C. T., and Marzeion, B.: The Open Global Glacier Model (OGGM) v1.1, Geosci. Model Dev., 12, 909–931, <a class="reference external" href="https://doi.org/10.5194/gmd-12-909-2019">https://doi.org/10.5194/gmd-12-909-2019</a>, 2019.</p></li>
-<li><p>Hugonnet, R., McNabb, R., Berthier, E., Menounos, B., Nuth, C., Girod, L., Farinotti, D., Huss, M., Dussaillant, I., Brun, F., and Kääb, A.: Accelerated global glacier mass loss in the early twenty-first century, Nature, 592, 726–731, <a class="reference external" href="https://doi.org/10.1038/s41586-021-03436-z">https://doi.org/10.1038/s41586-021-03436-z</a>, 2021.</p></li>
-<li><p>The GlaMBIE Team: Community estimate of global glacier mass changes from 2000 to 2023, Nature, 639, 382–388, <a class="reference external" href="https://doi.org/10.1038/s41586-024-08545-z">https://doi.org/10.1038/s41586-024-08545-z</a>, 2025.</p></li>
-<li><p>Copernicus Climate Change Service: ERA5 monthly averaged data on pressure levels from 1940 to present, <a class="reference external" href="https://doi.org/10.24381/CDS.6860A573">https://doi.org/10.24381/CDS.6860A573</a>, 2019.</p></li>
+<li><p>How to set up and run idealized experiments in OGGM</p></li>
+<li><p>The concept of peak water</p></li>
+<li><p>How to use <code class="docutils literal notranslate"><span class="pre">run_with_hydro</span></code> to generate hydrological projections</p></li>
+<li><p>The different components that make up glacier runoff</p></li>
 </ul>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -492,7 +471,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./session_03"
+            path: "./session_07"
         },
         predefinedOutput: true
     }
@@ -510,20 +489,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../session_02/flowline_creation.html"
+       href="topic.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Glacier Flowlines</p>
+        <p class="prev-next-title">StudiKickoff: Hydrological output</p>
       </div>
     </a>
     <a class="right-next"
-       href="mass_balance_model.html"
+       href="project.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mass balance model in OGGM</p>
+        <p class="prev-next-title">Group project</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,22 +512,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-of-this-session">Topic of this session</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links-and-references">Useful links and references</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
