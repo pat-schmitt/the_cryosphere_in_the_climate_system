@@ -35,4 +35,5 @@ parts:
   - caption: Session 07
     chapters:
     - file: session_07/topic
-    #- file: session_07/practicals
+    - file: session_07/hydrological_output
+    - file: session_07/project
